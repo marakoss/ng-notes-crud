@@ -1,0 +1,15 @@
+<div>
+  <h2>{{'Create note' | translate}}</h2>
+  <div class="form-group">
+    <textarea class="form-control" [(ngModel)]="noteData.title" placeholder="{{'Your note' | translate}}"></textarea>
+  </div>
+
+  <div class="nav">
+    <div class="nav-item">
+      <a class="btn btn-light" routerLink="/notes">{{'Return' | translate}}</a>
+    </div>
+    <div class="nav-item">
+      <button class="btn btn-success" (click)="addNote()">{{'Save' | translate}}</button>
+    </div>
+  </div>
+</div>

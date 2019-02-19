@@ -1,0 +1,13 @@
+<h2>{{'Change contents' | translate}}</h2>
+<div>
+  <textarea class="form-control" [(ngModel)]="noteData.title" placeholder="{{'Your note' | translate}}"></textarea>
+</div>
+<br />
+<div class="nav">
+  <div class="nav-item">
+    <a class="btn btn-light" routerLink="/note/detail/{{noteData.id}}">{{'Return' | translate}}</a>
+  </div>
+  <div class="nav-item">
+    <button class="btn btn-success" (click)="updateNote()" >{{'Update' | translate}}</button>
+  </div>
+</div>

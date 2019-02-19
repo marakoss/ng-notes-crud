@@ -1,0 +1,14 @@
+<div *ngIf="note" class="notes">
+  <h2>{{note.title}} </h2>
+
+  <div class="nav">
+    <div class="nav-item">
+      <a class="btn btn-light" routerLink="/notes">{{'Return' | translate}}</a>
+    </div>
+    <div class="nav-item">
+      <button class="btn btn-warning" routerLink="/note/edit/{{note.id}}">
+            {{'Edit' | translate}}
+          </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+
+
+<ul class="list-group notes">
+  <li class="list-group-item" *ngFor="let p of notes; let i=index;">
+    <div class="row">
+      <div class="col">
+        <a routerLink="/note/detail/{{p.id}}">
+          <span class="badge">{{i+1}}</span> {{p.title}}
+        </a>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-outline-danger btn-sm" title="{{'Delete' | translate}}" (click)="delete(p.id)">{{'Delete' | translate}}</button>
+      </div>
+    </div>
+  </li>
+</ul>
+<br />
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary" (click)="add()">
+      {{'Create note' | translate}}
+    </button>
+  </div>
+</div>
